@@ -52,6 +52,7 @@ public class Trie {
         }
         return true;
     }
+    
     //break each word in the dictionary
     public boolean wordsBreak(String wordToSearch, int count){
 
@@ -70,6 +71,7 @@ public class Trie {
 
         return false;
     }
+    
     // function to find longest and second longest words from the dictionary
     public String[] findLongestCompoundWords(List<String> dictionary) {
         String longestWord = "";
@@ -88,60 +90,4 @@ public class Trie {
 
         return new String[]{longestWord, secondLongestWord};
     }
-
-    // public String getLongestCompoundWord() {
-    //     String longestWord = "";
-    //     String curr = "";
-
-    //     for(int i=0;i<26;i++) {
-    //         if(root.children[i] != null) {
-    //             char c = (char) ('a' + i);
-    //             curr = findLongestCompoundWord(root.children[i], String.valueOf(c));
-    //             if(curr.length() > longestWord.length()) {
-    //                 longestWord = curr;
-    //             }
-    //         }
-    //     }
-
-    //     return longestWord;
-    // }
-
-    // public String findLongestCompoundWord(Node node, String curr) {
-    //     String longest = curr;
-        
-    //     if(node.eow) { 
-    //         curr = "";
-    //     }
-
-    //     for(int i=0;i<26;i++) {
-    //         if(node.children[i] != null) {
-    //             char c = (char) ('a' + i);
-    //             String newWord = curr + c;
-    //             String next = findLongestCompoundWord(node.children[i], newWord);
-    //             if(next.length() > longest.length()) {
-    //                 longest = next;
-    //             }
-    //         }
-    //     }
-
-    //     return longest;
-    // }
-
-    // public String getSecondLongestCompoundWord() {
-    //     String longestWord = getLongestCompoundWord();
-
-    //     String secondLongestWord = "";
-
-    //     for (int i = 0; i < 26; i++) {
-    //         if (root.children[i] != null) {
-    //             char c = (char) ('a' + i);
-    //             String curr = findLongestCompoundWord(root.children[i], String.valueOf(c));
-    //             if (curr.length() > secondLongestWord.length() && !curr.equals(longestWord)) {
-    //                 secondLongestWord = curr;
-    //             }
-    //         }
-    //     }
-
-    //     return secondLongestWord;
-    // }
 }
